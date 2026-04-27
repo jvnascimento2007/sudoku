@@ -3,6 +3,7 @@ import './style/style.css'
 // elementos html
 const digitsBar = document.getElementById('digits')
 const sudokuGame = document.getElementById('sudoku')
+const errorsCount = document.getElementById('errors')
 
 // variaveis de jogo
 var selectedDigit = '-'
@@ -30,6 +31,8 @@ const solution = [
     "675832941",
     "812945763"
 ]
+
+var errors = 0
 
 // iniciar jogo
 function init() {
@@ -69,6 +72,18 @@ function init() {
 
             cell.innerHTML = (cellValue != '-' )? cellValue : '';
 
+            if(c == 0) {
+                cell.classList.add('initial-cell')
+            }
+
+            if(r == 2 || r == 5) {
+                cell.classList.add('horizontal-line')
+            }
+            
+            if(c == 2 || c == 5) {
+                cell.classList.add('vertical-line')
+            }
+
             cell.addEventListener('click', cellClicked)
 
             sudokuGame.appendChild(cell)
@@ -105,6 +120,22 @@ function cellClicked(event) {
     if(selectedDigit == '-') return;
 
     if(cell.classList.contains('tip-cell')) return;
+    if(cell.classList.contains('correct-cell-value')) return;
+
+    const coordinates = cell.id.split('-')
+    const row = coordinates[0]
+    const column = coordinates[1]
+
+    if(solution[row][column] == selectedDigit) {
+        cell.classList.remove('wrong-cell-value')
+        cell.classList.add('correct-cell-value')
+    } else {
+        cell.classList.add('wrong-cell-value')
+        errorsCount.innerHTML = ++errors
+    }
+
+    console.log(solution[row][column])
+    console.log(selectedDigit)
 
     cell.innerHTML = selectedDigit
 

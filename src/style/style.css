@@ -2,8 +2,10 @@
     --unpressed-digit: hsl(0, 0%, 95%);
     --pressed-digit: hsl(0, 0%, 80%);
     --empty-cell: white;
-    --tip-cell: hsl(0, 0%, 95%);
-    --tip-cell-value: hsl(0, 0%, 35%);
+    --tip-cell: hsl(0, 0%, 96.5%);
+    --tip-cell-value: black;
+    --correct-cell-value: hsl(220, 100%, 45%);
+    --wrong-cell-value: hsl(16, 100%, 66%);
 }
 
 body {
@@ -49,6 +51,7 @@ h2 {
     grid-template-rows: repeat(9, 34px);
     justify-content: center;
     align-items: center;
+    gap: 1px;
     width: 310px;
     height: 310px;
 }
@@ -92,4 +95,12 @@ h2 {
 .tip-cell {
     color: var(--tip-cell-value);
     background-color: var(--tip-cell);
+}
+
+.correct-cell-value {
+    color: var(--correct-cell-value);
+}
+
+.wrong-cell-value {
+    color: var(--wrong-cell-value);
 }
