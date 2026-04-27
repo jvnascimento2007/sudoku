@@ -1,4 +1,5 @@
 import './style/style.css'
+import './style/tablet-768px.css'
 
 // elementos html
 const digitsBar = document.getElementById('digits')
