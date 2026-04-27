@@ -2,7 +2,8 @@
     --unpressed-digit: hsl(0, 0%, 95%);
     --pressed-digit: hsl(0, 0%, 80%);
     --empty-cell: white;
-    --game-cell: hsl(0, 0%, 95%);
+    --tip-cell: hsl(0, 0%, 95%);
+    --tip-cell-value: hsl(0, 0%, 35%);
 }
 
 body {
@@ -55,6 +56,7 @@ h2 {
 #digits {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
     width: 150px;
     height: 150px;
@@ -67,6 +69,7 @@ h2 {
     border: 1px solid gray;
     border-radius: 5px;
     background-color: var(--unpressed-digit);
+    font-size: 1.25em;
 }
 
 .pressed-digit {
@@ -84,4 +87,9 @@ h2 {
     height: 34px;
     border: 1px solid gray;
     background-color: var(--empty-cell);
+}
+
+.tip-cell {
+    color: var(--tip-cell-value);
+    background-color: var(--tip-cell);
 }
