@@ -19,8 +19,8 @@
     }
 
     #sudoku {
-        grid-template-columns: repeat(9, 55px);
-        grid-template-rows: repeat(9, 55px);
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
         width: 500px;
         height: 500px;
     }
@@ -46,8 +46,15 @@
 
     .cell {
         font-size: 2em;
-        width: 55px;
         height: 55px;
+    }
+
+    .horizontal-line {
+        border-bottom: 6px solid black;
+    }
+
+    .vertical-line {
+        border-right: 6px solid black;
     }
 
 }

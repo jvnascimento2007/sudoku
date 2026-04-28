@@ -47,13 +47,12 @@ h2 {
 
 #sudoku {
     display: grid;
-    grid-template-columns: repeat(9, 34px);
-    grid-template-rows: repeat(9, 34px);
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 1px;
-    width: 310px;
-    height: 310px;
+    width: 300px;
+    height: 300px;
 }
 
 #digits {
@@ -86,8 +85,7 @@ h2 {
     align-items: center;
     text-align: center;
     font-size: 1.5em;
-    width: 34px;
-    height: 34px;
+    height: 33px;
     border: 1px solid gray;
     background-color: var(--empty-cell);
 }
@@ -103,4 +101,12 @@ h2 {
 
 .wrong-cell-value {
     color: var(--wrong-cell-value);
+}
+
+.horizontal-line {
+    border-bottom: 4px solid black;
+}
+
+.vertical-line {
+    border-right: 4px solid black;
 }

@@ -71,11 +71,7 @@ function init() {
                 cell.classList.add('tip-cell')
             }
 
-            cell.innerHTML = (cellValue != '-' )? cellValue : '';
-
-            if(c == 0) {
-                cell.classList.add('initial-cell')
-            }
+            cell.innerHTML = (cellValue != '-')? cellValue : '';
 
             if(r == 2 || r == 5) {
                 cell.classList.add('horizontal-line')
