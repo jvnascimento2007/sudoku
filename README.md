@@ -1,6 +1,13 @@
 # Sudoku
 Feito em Vanilla JS usando o bundler Vite e gerenciador de pacotes Bun
 
+# Preview
+
+Tela do jogo primeiro no desktop e em seguida no mobile
+
+<img src="./desktop.png">
+<img src="./mobile.png">
+
 # Como rodar o projeto
 
 Primeiro baixe esse repositório
