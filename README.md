@@ -5,8 +5,10 @@ Feito em Vanilla JS usando o bundler Vite e gerenciador de pacotes Bun
 
 Tela do jogo primeiro no desktop e em seguida no mobile
 
-<img src="./desktop.png">
-<img src="./mobile.png">
+<div style="display:flex;">
+  <img src="./desktop.png">
+  <img src="./mobile.png">
+</div>
 
 # Como rodar o projeto
 
